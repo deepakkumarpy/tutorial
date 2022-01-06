@@ -1,0 +1,75 @@
+package details;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.LocalTime;
+import java.util.Date;
+import java.util.Scanner;
+public class details {
+	int id;
+	long number;
+	long start_time;
+	long end_time;
+	float duration;
+
+	public details() 
+	{
+	}
+	public details(int id,long number,long start_time,long end_time,float duration)
+	{
+		this.id=id;
+		this.number=number;
+		this.start_time=start_time;
+		this.end_time=end_time;
+		this.duration=duration;
+	}
+	static class call extends details
+	{
+		long Date,start_time,end_time,duration;
+		public call(int id,long number,long start_time,long end_time,float duration)
+		{
+			super(id,number,start_time,end_time,duration);
+	    }
+		@SuppressWarnings("unused")
+		static
+		void detail()
+		{
+		System.out.println("call id");
+		@SuppressWarnings("resource")
+		Scanner input=new Scanner(System.in);
+		System.out.println("number");
+		Date thisDate=new Date();
+		SimpleDateFormat DateForm = new SimpleDateFormat("dd/mm/yy");
+		System.out.println(DateForm.format(thisDate));
+		LocalTime start_time=details.minus(null);
+		System.out.println("start_time");
+		LocalTime end_time=details.plus(null);
+		System.out.println("end_time");
+		float duration=Duration.between(start_time, end_time).getSeconds();
+		System.out.println(duration);
+	     }
+	}
+	
+public static class main{
+	public main(String[] args) {
+		call.detail();
+	}
+
+	public static LocalTime plus(Object object) {
+		
+		return null;
+	}
+	public static LocalTime minus(Object object) {
+
+		return null;
+	}
+}
+
+public static LocalTime minus(Object object) {
+
+	return null;
+}
+public static LocalTime plus(Object object) {
+	return null;
+}
+
+}
